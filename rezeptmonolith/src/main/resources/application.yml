@@ -39,9 +39,9 @@ spring:
     activate:
       on-profile: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/rmdb?allowPublicKeyRetrieval=true&useSSL=False
+    url: jdbc:mysql://localhost:1306/rmdb?allowPublicKeyRetrieval=true&useSSL=False
     username: root
-    password: password
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 10
