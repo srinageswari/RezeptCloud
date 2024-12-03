@@ -6,9 +6,31 @@ spring:
 
 server:
   port: 5000
+  shutdown: graceful
   servlet:
     session:
       timeout: 60m
+
+## Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,env,beans,metrics,httptrace,loggers,threaddump,shutdown
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Rezeptmonolith
+    version: 0.0.1-SNAPSHOT
+    description: Rezeptmonolith
 
 ---
 
